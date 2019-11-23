@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:interpolator="@android:anim/accelerate_interpolator">
+    <!--
+    below is a scene that can be applied to any view
+    rotate the view also scale the image  as well fadeout the view ..
+    all these things runs simultaneously ...
+    -->
+
+    <!--
+   when pivot-x and pivot-y  are at 50 percent then that means it pointing to the center of the view
+   rotate 360 with in 0.5 seconds
+    -->
 
     <rotate
         android:duration="1000"
@@ -8,10 +18,13 @@
         android:pivotX="50%"
         android:pivotY="50%"
         android:startOffset="500"
-        android:toDegrees="270" />
+        android:toDegrees="360" />
+    <!--while roating reduce the height and width of the image that is nothing but scaling
 
+    scale with in 0.5 seconds
+    -->
     <scale
-        android:duration="5000"
+        android:duration="500"
         android:fromXScale="1.0"
         android:fromYScale="1.0"
         android:pivotX="50%"
@@ -19,7 +32,10 @@
         android:startOffset="500"
         android:toXScale="0.0"
         android:toYScale="0.0" />
-
+    <!--
+    alpha stands for opacity where of the image
+    fade out with in 0.5 second
+    -->
     <alpha
         android:duration="500"
         android:fromAlpha="1.0"
